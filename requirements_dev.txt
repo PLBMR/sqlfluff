@@ -3,6 +3,7 @@
 flake8
 flake8-docstrings
 flake8-black
+black==21.12b0
 # documentation checks
 doc8
 Pygments
