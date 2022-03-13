@@ -6,6 +6,7 @@ from typing import List, Optional
 from sqlfluff.core.dialects.common import AliasInfo, ColumnAliasInfo
 from sqlfluff.core.parser import BaseSegment
 from sqlfluff.core.rules.base import BaseRule, LintResult, RuleContext, EvalResultType
+from sqlfluff.core.dialects.base import Dialect
 from sqlfluff.core.rules.analysis.select import get_select_statement_info
 
 
@@ -65,6 +66,7 @@ class Rule_L020(BaseRule):
         references: List[BaseSegment],
         col_aliases: List[ColumnAliasInfo],
         using_cols: List[str],
+        dialect_name: Optional[str],
         parent_select: Optional[BaseSegment],
     ) -> Optional[List[LintResult]]:
         """Check whether any aliases are duplicates.
@@ -122,5 +124,6 @@ class Rule_L020(BaseRule):
                 select_info.col_aliases,
                 select_info.using_cols,
                 parent_select,
+                context.dialect.name,
             )
         return None
