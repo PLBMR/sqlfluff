@@ -1,6 +1,9 @@
 """Implementation of Rule L027."""
+from typing import List, Optional
 
+from sqlfluff.core.dialects.common import AliasInfo, ColumnAliasInfo
 from sqlfluff.core.rules.base import LintResult
+from sqlfluff.core.parser import BaseSegment
 from sqlfluff.rules.L020 import Rule_L020
 
 

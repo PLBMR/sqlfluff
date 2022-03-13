@@ -6,7 +6,6 @@ from typing import List, Optional
 from sqlfluff.core.dialects.common import AliasInfo, ColumnAliasInfo
 from sqlfluff.core.parser import BaseSegment
 from sqlfluff.core.rules.base import BaseRule, LintResult, RuleContext, EvalResultType
-from sqlfluff.core.dialects.base import Dialect
 from sqlfluff.core.rules.analysis.select import get_select_statement_info
 
 
