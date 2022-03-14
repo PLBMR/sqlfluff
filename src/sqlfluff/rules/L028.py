@@ -79,6 +79,7 @@ class Rule_L028(Rule_L020):
         col_aliases,
         using_cols,
         parent_select,
+        dialect_name,
     ):
         """Iterate through references and check consistency."""
         self.single_table_references: str
