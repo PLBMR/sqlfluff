@@ -65,8 +65,8 @@ class Rule_L027(Rule_L020):
         references: List[BaseSegment],
         col_aliases: List[ColumnAliasInfo],
         using_cols: List[str],
-        dialect_name: Optional[str],
         parent_select: Optional[BaseSegment],
+        dialect_name: Optional[str],
     ) -> Optional[List[LintResult]]:
         # Do we have more than one? If so, all references should be qualified.
         if len(table_aliases) <= 1:

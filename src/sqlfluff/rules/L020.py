@@ -65,8 +65,8 @@ class Rule_L020(BaseRule):
         references: List[BaseSegment],
         col_aliases: List[ColumnAliasInfo],
         using_cols: List[str],
-        dialect_name: Optional[str],
         parent_select: Optional[BaseSegment],
+        dialect_name: Optional[str],
     ) -> Optional[List[LintResult]]:
         """Check whether any aliases are duplicates.
 
